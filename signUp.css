@@ -76,7 +76,9 @@ form label input {
     border-radius: 3px;
     margin: 5px 0;
     outline: 1px solid black;
+    padding-left: 30px;
 }
+
 
 #but {
     width: 200px;

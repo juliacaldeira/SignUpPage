@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="box">
-        <form>
+        <form method="POST">
             <h2>Login</h2>
             <div id="logos">
             <img src="logoG.png" class="logo"><img src="logoF.png" class="logo">
@@ -29,3 +29,26 @@
 </div>
 </body>
 </html>
+
+<?php 
+
+
+if (!empty($_POST['name']) && !empty($_POST['password'])) {
+
+    $nome = $_POST['name'];
+    $senha = $_POST['password'];
+
+$link = mysqli_connect("localhost", "root", "", "form");
+$string_sql = "INSERT INTO usuario (id,nome,senha) VALUES (null,'$nome','$senha')";
+
+mysqli_query($link, $string_sql);
+
+if(mysqli_affected_rows($link) > 0) {
+    echo "Foi";
+} else {
+    echo "não foi";
+}
+
+mysqli_close($link);
+}
+?>
