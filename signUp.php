@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signUp.css" type="text/css">
-    <link rel="icon" type="image/ico" href="splash.ico">
+    <link rel="icon" type="image/ico" href="/images/splash.ico">
     <script>
         function sucess() {
             alert('Cadastro realizado com sucesso!');
@@ -31,7 +31,7 @@
         <form method="POST" action="signUp.php">
             <h2>Login</h2>
             <div id="logos">
-            <img src="logoG.png" class="logo"><img src="logoF.png" class="logo">
+            <img src="/images/logoG.png" class="logo"><img src="/images/logoF.png" class="logo">
             </div> 
             <label for="name"> Username
                 <input id="name" name="name" type="text" required>
