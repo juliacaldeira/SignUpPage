@@ -24,19 +24,16 @@
             }
         }
     </script>
-    <title>Sign Up</title>
+    <title>Sign In</title>
 </head>
 <body>
 <div id="box">
         <form method="POST" action="signUp.php">
-            <h2>Cadastro</h2>
+            <h2>Login</h2>
             <div id="logos">
             <img src="/images/logoG.png" class="logo"><img src="/images/logoF.png" class="logo">
             </div> 
             <label for="name"> Username
-                <input id="name" name="name" type="text" required>
-            </label>
-            <label for="name"> Email
                 <input id="name" name="name" type="text" required>
             </label>
             <label for="password"> Password
@@ -54,11 +51,10 @@
 
 <?php 
 
-if (!empty($_POST['name']) && !empty($_POST['password']) && !empty($_POST['email'])) {
+if (!empty($_POST['name']) && !empty($_POST['password'])) {
 
     $nome = $_POST['name'];
     $senha = $_POST['password'];
-    $email = $_POST['email'];
 
     echo '<script>senha();</script>';
 
@@ -79,4 +75,4 @@ mysqli_close($con);
 else {
     echo '<script>exist();</script>';
 }}
-?>
+?>1
